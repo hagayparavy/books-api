@@ -1,0 +1,75 @@
+# ==========================================
+# uv & Environment Specific
+# ==========================================
+# uv local virtual environment (never commit this)
+.venv/
+
+# If you use alternative virtualenv names
+env/
+venv/
+ENV/
+
+# ==========================================
+# Python Artifacts & Caches
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging artifactsbuild/
+develop-eggs/
+dist/
+eggs/
+.eggs/
+lib64/
+sdist/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ==========================================
+# Tooling & Linters
+# ==========================================
+# Ruff linting/formatting cache
+.ruff_cache/
+
+# Mypy and other type checkers
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# pytest and coverage
+.pytest_cache/
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.hypothesis/
+coverage.xml
+*.cover
+
+# ==========================================
+# Environments & Secrets
+# ==========================================
+# Never commit sensitive environment variables!
+.env
+.env.local
+.env.*
+!.env.example
+
+# ==========================================
+# IDEs & System Files
+# ==========================================
+# VS Code (uncomment if you want to ignore user workspace configurations)
+#.vscode/
+
+
+# OS specific files
+.DS_Store
+Thumbs.db
