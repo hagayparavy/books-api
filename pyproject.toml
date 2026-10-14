@@ -23,3 +23,17 @@ dev = [
     "pytest>=9.1.1",
     "ruff>=0.16.10",
 ]
+
+[tool.ruff.lint]
+# Defaults (E4, E7, E9, F) plus: bugbear, pyupgrade, isort, simplify, pep8-naming, bandit (security)
+extend-select = ["B", "UP", "I", "SIM", "N", "S"]
+
+[tool.ruff.lint.per-file-ignores]
+# pytest is built on plain `assert`; bandit's S101 only makes sense for production code
+"tests/**" = ["S101"]
+
+[tool.mypy]
+strict = true
+# Add "tests" here once the tests/ folder has its first test (M1.01 task 9);
+# mypy errors on a missing or empty directory.
+files = ["src"]
