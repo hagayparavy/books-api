@@ -23,13 +23,15 @@ repos:
 #   rev: v8.30.0
 #   hooks:
 #     - id: gitleaks
-# # Added: local mypy hook. No official snippet exists, and the mirror (pre-commit/mirrors-mypy)
-# # runs mypy in an isolated env without your deps or strict config, so we run the project's own mypy.
-# - repo: local  # Added: "local" = the hook is defined here, not cloned from a repo, so there is no `rev`
-#   hooks:
-#     - id: mypy  # Added: id you can target with `pre-commit run mypy`
-#       name: mypy  # Added: label printed in the hook output
-#       entry: uv run mypy  # Added: the same command you'd type by hand; uses the venv + uv.lock version
-#       language: system  # Added: run `entry` as-is, don't build an isolated environment
-#       pass_filenames: false  # Added: don't append staged files; mypy reads `files = ["src"]` from pyproject.toml
-#       types: [python]  # Added: skip the hook when a commit touches no Python files
+# Fixed: the mypy hook below was accidentally commented out together with gitleaks (commit 2d38f1f).
+# was: every line of this block started with `# `, so pre-commit never ran mypy.
+# Added: local mypy hook. No official snippet exists, and the mirror (pre-commit/mirrors-mypy)
+# runs mypy in an isolated env without your deps or strict config, so we run the project's own mypy.
+- repo: local  # Added: "local" = the hook is defined here, not cloned from a repo, so there is no `rev`
+  hooks:
+    - id: mypy  # Added: id you can target with `pre-commit run mypy`
+      name: mypy  # Added: label printed in the hook output
+      entry: uv run mypy  # Added: the same command you'd type by hand; uses the venv + uv.lock version
+      language: system  # Added: run `entry` as-is, don't build an isolated environment
+      pass_filenames: false  # Added: don't append staged files; mypy reads `files = ["src"]` from pyproject.toml
+      types: [python]  # Added: skip the hook when a commit touches no Python files

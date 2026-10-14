@@ -16,7 +16,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Distribution / packaging artifactsbuild/
+# Distribution / packaging artifacts
+# Fixed: `build/` was glued to the comment above, so it wasn't ignored.
+# was: # Distribution / packaging artifactsbuild/
+build/
 develop-eggs/
 dist/
 eggs/

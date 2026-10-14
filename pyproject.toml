@@ -1,8 +1,14 @@
 [project]
 name = "books-api"
 version = "0.1.0"
-description = "Add your description here"
+# Fixed: replaced the `uv init` placeholder.
+# was: description = "Add your description here"
+description = "REST API for the Books Tracker: books, reading status, and metadata lookup."
 readme = "README.md"
+# Added: SPDX license expression (PEP 639) — the modern form; the old `license = { text = ... }` table is deprecated
+license = "MIT"
+# Added: ships the LICENSE file inside built packages
+license-files = ["LICENSE"]
 authors = [
     { name = "hagay paravy", email = "104374729+hagayparavy@users.noreply.github.com" }
 ]
