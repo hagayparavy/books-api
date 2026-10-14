@@ -1,13 +1,10 @@
 [project]
 name = "books-api"
 version = "0.1.0"
-# Fixed: replaced the `uv init` placeholder.
-# was: description = "Add your description here"
 description = "REST API for the Books Tracker: books, reading status, and metadata lookup."
 readme = "README.md"
-# Added: SPDX license expression (PEP 639) — the modern form; the old `license = { text = ... }` table is deprecated
+# SPDX expression (PEP 639); the old `license = { text = ... }` table form is deprecated
 license = "MIT"
-# Added: ships the LICENSE file inside built packages
 license-files = ["LICENSE"]
 authors = [
     { name = "hagay paravy", email = "104374729+hagayparavy@users.noreply.github.com" }
@@ -15,8 +12,10 @@ authors = [
 requires-python = ">=3.14"
 dependencies = []
 
-[project.scripts]
-books-api = "books_api:main"
+# Fixed: removed the `uv init` console script — the app will run under uvicorn, not as a CLI.
+# was:
+# [project.scripts]
+# books-api = "books_api:main"
 
 [build-system]
 requires = ["uv_build>=0.12.23,<0.13.0"]
@@ -27,7 +26,7 @@ dev = [
     "mypy>=2.4.0",
     "pre-commit>=4.6.2",
     "pytest>=9.1.1",
-    "ruff>=0.16.10",
+    "ruff>=0.17.0",
 ]
 
 [tool.ruff.lint]
@@ -40,6 +39,4 @@ extend-select = ["B", "UP", "I", "SIM", "N", "S"]
 
 [tool.mypy]
 strict = true
-# Fixed: tests are type-checked too, now that tests/ has its first test (M1.01 task 9).
-# was: files = ["src"]   (plus a reminder comment to add "tests" here)
 files = ["src", "tests"]

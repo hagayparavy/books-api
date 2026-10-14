@@ -1,4 +1,3 @@
-<!-- Added: the whole README (task 7). HTML comments like this one don't render on GitHub. -->
 # books-api
 
 The backend of the Books Tracker: a REST API (FastAPI + PostgreSQL) that stores your books and reading
@@ -12,7 +11,6 @@ using the OpenAPI spec published with each release.
 - [just](https://just.systems/) — command runner
 - git
 
-<!-- Added: worth stating — Python people expect to install the interpreter themselves -->
 You don't need to install Python yourself: uv downloads the version pinned in `.python-version`.
 
 ## Getting started
@@ -26,7 +24,7 @@ just test
 
 ## Commands
 
-<!-- Added: mirrors `just --list`; update both together -->
+<!-- Mirrors `just --list`; update both together. -->
 | Command | What it does |
 |---|---|
 | `just` | List available recipes |

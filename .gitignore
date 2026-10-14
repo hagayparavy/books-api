@@ -17,8 +17,6 @@ __pycache__/
 *$py.class
 
 # Distribution / packaging artifacts
-# Fixed: `build/` was glued to the comment above, so it wasn't ignored.
-# was: # Distribution / packaging artifactsbuild/
 build/
 develop-eggs/
 dist/

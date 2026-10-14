@@ -1,6 +1,3 @@
-<!-- Fixed: removed the template's own heading. was: "# ADR Template" above the real title -->
-<!-- Added: every section below filled in from the M1.01 toolchain decisions (2026-10-08) and the
-     deviations found while setting them up (2026-10-14). HTML comments don't render on GitHub. -->
 # ADR-0001: Python toolchain
 
 - Status: Accepted
