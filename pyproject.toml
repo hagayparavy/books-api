@@ -40,6 +40,6 @@ extend-select = ["B", "UP", "I", "SIM", "N", "S"]
 
 [tool.mypy]
 strict = true
-# Add "tests" here once the tests/ folder has its first test (M1.01 task 9);
-# mypy errors on a missing or empty directory.
-files = ["src"]
+# Fixed: tests are type-checked too, now that tests/ has its first test (M1.01 task 9).
+# was: files = ["src"]   (plus a reminder comment to add "tests" here)
+files = ["src", "tests"]
